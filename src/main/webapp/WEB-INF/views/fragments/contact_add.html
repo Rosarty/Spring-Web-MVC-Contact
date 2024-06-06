@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Contact</title>
+</head>
+<body style="background-color: #E9ECEB;">
+<div th:fragment="contact_add" class="container m-2">
+    <div class="container-sm" style="background-color: #FCFCFC;">
+        <div class="row">
+            <!-- Add form start -->
+            <div class="col-md-6 offset-md-3">
+                <h4 class="text-center mb-3 mt-3 text-warning">Add Contact</h4>
+                <!-- form -->
+                <form th:action="@{/add-contact}" method="post">
+                    <div>
+                        <label for="firstName"><span style="font-size:12px;">First Name</span></label>
+                        <input type="text" class="form-control fw-light" id="firstName" name="firstName"
+                               placeholder="First name...">
+                    </div>
+                    <div>
+                        <label for="lastName"><span style="font-size:12px;">Last Name</span></label>
+                        <input type="text" class="form-control fw-light" id="lastName" name="lastName"
+                               placeholder="Last name...">
+                    </div>
+                    <div>
+                        <label for="phone"><span style="font-size:12px;">Phone</span></label>
+                        <input type="text" class="form-control fw-light" id="phone" name="phone"
+                               placeholder="Phone number...">
+                    </div>
+                    <div class="container text-center mb-4"><br>
+                        <a th:href="@{/contacts}" class="btn btn-outline-primary btn-sm">Back</a>
+                        &nbsp;&nbsp;
+                        <button type="submit" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Add form end -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

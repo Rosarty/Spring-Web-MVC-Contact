@@ -1,0 +1,20 @@
+
+
+CREATE TABLE IF NOT EXISTS books
+( id INTEGER NOT NULL AUTO_INCREMENT,
+  title VARCHAR(255) NOT NULL,
+  author VARCHAR(255) NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  quota INTEGER NOT NULL,
+  PRIMARY KEY (id)
+);
+
+
+CREATE TABLE contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL
+);
+
+

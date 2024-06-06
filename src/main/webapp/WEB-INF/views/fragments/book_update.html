@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<body style="background-color: #E9ECEB;">
+		<div th:fragment="book_update" class="container m-2">
+			<div class="container-sm">
+				<div class="row" style="background-color: #FCFCFC;">
+					<!-- Update form start -->
+					<div class="col-md-6 offset-md-3">
+						<h4 class="text-center mb-3 mt-3 text-warning">Update Book</h4>
+						<form th:object="${book}" th:action="@{/change-book}" method="post">
+							<div>
+								<input type="hidden" name="id" class="form-control" th:field="*{id}">
+							</div>
+							<div>
+								<label for="title"><span style="font-size:12px;">Title</span></label>
+								<input type="text"	class="form-control" id="title" name="title"
+									placeholder="Book title..." th:field="*{title}">
+							</div>
+							<div>
+								<label for="author"><span style="font-size:12px;">Author</span></label>
+								<input type="text"	class="form-control" id="author" name="author"
+									placeholder="Book author..." th:field="*{author}">
+							</div>
+							<div>
+								<label for="description"><span style="font-size:12px;">Description</span></label>
+								<textarea class="form-control" name="description" id="description"
+									rows="3" placeholder="Book description..."
+										  th:field="*{description}"></textarea>
+							</div>
+							<div>
+								<label for="quota"><span style="font-size:12px;">Quota</span></label>
+								<input type="text"	class="form-control" id="quota" name="quota"
+									placeholder="Book quota..." th:field="*{quota}">
+							</div>
+							<div class="container text-center mb-4"><br>
+								<a th:href="@{/books}" class="btn btn-outline-primary btn-sm">Back</a>
+								&nbsp;&nbsp;
+								<button type="submit" class="btn btn-primary btn-sm">Update</button>
+							</div>
+						</form>
+					</div>
+					<!-- Update form end -->
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
